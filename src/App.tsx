@@ -7,7 +7,14 @@ import Github from "./sections/Github";
 
 export default function App() {
   return (
-    <div>
+    <div
+    style={{
+      fontFamily: "'Inter', sans-serif", // global font
+      scrollBehavior: "smooth",           // smooth scrolling for anchor links
+    }}
+    
+    >
+
       <Hero />
       <About />
       <TechStack />
