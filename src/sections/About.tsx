@@ -7,6 +7,11 @@ export default function About() {
           maxWidth: "900px",
           margin: "0 auto",
           textAlign: "center",
+          backgroundColor: "#ffffff",
+borderRadius: "12px",
+marginBottom: "3rem",
+boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+
         }}
       >
         <h2 style={{ fontSize: "2rem", marginBottom: "1.5rem", color: "#1a1a1a" }}>

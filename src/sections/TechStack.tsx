@@ -1,50 +1,66 @@
+import React from "react";
+
+const primaryColor = "#6C63FF";
+
 export default function TechStack() {
-    const stacks = {
-      Backend: ["Node.js", "Express", "Sequelize"],
-      Database: ["PostgreSQL", "MySQL"],
-      Architecture: ["Role & permission systems", "Service-layer architecture", "Filtering & Pagination"],
-      Tools: ["Git", "Postman", "Docker"],
-    };
-  
-    return (
-      <section
-        id="stack"
+  const cardStyle: React.CSSProperties = {
+    padding: "1.5rem",
+    borderRadius: "12px",
+    backgroundColor: "#fff",
+    boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+    textAlign: "center",
+    transition: "transform 0.3s, box-shadow 0.3s",
+  };
+
+  const cardHover = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.currentTarget;
+    target.style.transform = "translateY(-5px)";
+    target.style.boxShadow = "0 8px 20px rgba(0,0,0,0.15)";
+  };
+
+  const cardLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.currentTarget;
+    target.style.transform = "translateY(0)";
+    target.style.boxShadow = "0 4px 12px rgba(0,0,0,0.1)";
+  };
+
+  return (
+    <section
+      id="tech"
+      style={{
+        padding: "6rem 1rem",
+        maxWidth: "900px",
+        margin: "0 auto",
+        textAlign: "center",
+        backgroundColor: "#ffffff",
+borderRadius: "12px",
+marginBottom: "3rem",
+boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+
+      }}
+    >
+      <h2 style={{ marginBottom: "3rem" }}>Tech Stack</h2>
+
+      <div
         style={{
-          padding: "5rem 1rem",
-          maxWidth: "900px",
-          margin: "0 auto",
-          textAlign: "center",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+          gap: "2rem",
         }}
       >
-        <h2 style={{ fontSize: "2rem", marginBottom: "2rem", color: "#1a1a1a" }}>
-          Tech Stack
-        </h2>
-  
-        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "2rem" }}>
-          {Object.entries(stacks).map(([category, skills]) => (
+        {["Node.js", "Express", "Sequelize", "PostgreSQL", "JWT", "React", "TypeScript"].map(
+          (tech) => (
             <div
-              key={category}
-              style={{
-                minWidth: "200px",
-                padding: "1rem",
-                borderRadius: "12px",
-                backgroundColor: "#fff",
-                boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-                textAlign: "left",
-              }}
+              key={tech}
+              style={cardStyle}
+              onMouseOver={cardHover}
+              onMouseOut={cardLeave}
             >
-              <h3 style={{ fontSize: "1.2rem", marginBottom: "1rem", color: "#333" }}>
-                {category}
-              </h3>
-              <ul style={{ paddingLeft: "1rem", color: "#555", lineHeight: "1.6" }}>
-                {skills.map((skill) => (
-                  <li key={skill}>{skill}</li>
-                ))}
-              </ul>
+              <h3 style={{ color: primaryColor }}>{tech}</h3>
             </div>
-          ))}
-        </div>
-      </section>
-    );
-  }
-  
+          )
+        )}
+      </div>
+    </section>
+  );
+}

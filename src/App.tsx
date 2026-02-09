@@ -9,11 +9,12 @@ export default function App() {
   return (
     <div
     style={{
-      fontFamily: "'Inter', sans-serif", // global font
-      scrollBehavior: "smooth",           // smooth scrolling for anchor links
+      fontFamily: "'Inter', sans-serif",
+      scrollBehavior: "smooth",
+      backgroundColor: "#f5f6fa", // light grey background
     }}
-    
-    >
+  >
+  
 
       <Hero />
       <About />

@@ -26,6 +26,11 @@ export default function Github() {
           maxWidth: "900px",
           margin: "0 auto",
           textAlign: "center",
+          backgroundColor: "#ffffff",
+borderRadius: "12px",
+marginBottom: "3rem",
+boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+
         }}
       >
         <h2 style={{ fontSize: "2rem", marginBottom: "2rem", color: "#1a1a1a" }}>
