@@ -10,6 +10,7 @@ export default function About() {
         backgroundColor: "#ffffff",
         borderRadius: "12px",
         boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+        scrollMarginTop: "80px",
       }}
     >
       <h2

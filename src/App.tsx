@@ -1,9 +1,11 @@
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import TechStack from "./sections/TechStack";
-import Projects from "./sections/Projects";
 import Design from "./sections/Design";
 import Github from "./sections/Github";
+import Navbar from "./components/Navbar";
+import Project from "./components/Projects";
+import Contact from "./sections/Contact";
 
 export default function App() {
   return (
@@ -11,16 +13,18 @@ export default function App() {
     style={{
       fontFamily: "'Inter', sans-serif",
       scrollBehavior: "smooth",
-      backgroundColor: "#f5f6fa", // light grey background
+      backgroundColor: "#f5f6fa", 
+      paddingTop: "80px" 
     }}
   >
-  
+  <Navbar />
 
       <Hero />
       <About />
+      <Project />
       <TechStack />
-      <Projects />
       <Design />
+      <Contact />
       <Github />
     </div>
   );

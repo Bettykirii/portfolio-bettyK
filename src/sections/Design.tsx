@@ -11,6 +11,7 @@ export default function Design() {
 borderRadius: "12px",
 marginBottom: "3rem",
 boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+scrollMarginTop: "80px",
 
         }}
       >
